@@ -282,23 +282,18 @@
           </div>
       </div>
     </main>
-    <div id="box">
-    </div>
-    <script>
-    	var xhr = new XMLHttpRequest(),
-    		method = "GET",
-    		url = "footer.tpl";//読み込まれるHTMLを指定
-    	var box= document.getElementById("box");//読み込みたい位置を指定
-
-    	xhr.open(method, url, true);
-    	xhr.onreadystatechange = function () {
-    		if(xhr.readyState === 4 && xhr.status === 200) {
-    			var restxt = xhr.responseText;//String型で取得
-    			box.innerHTML= restxt;//完了
-    		}
-    	};
-    	xhr.send();
-    </script>
+    <footer>
+      <div class="footer-inner">
+        <nav>
+          <ul>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">会社概要</a></li>
+            <li><a href="#">個人情保護方針</a></li>
+          </ul>
+        </nav>
+        <p class="copyright"><small>@Copyright2020 Shiba-WebSite.All Rights Reserved.</small></p>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>

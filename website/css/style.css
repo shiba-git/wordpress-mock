@@ -1,6 +1,6 @@
 /*
 Theme Name: TestTheme
-Theme URL: 
+Theme URL:
 Description: wordpressの学習用サイト
 Author: Shibayama Hiroki
 Version: 1.0
@@ -63,8 +63,26 @@ h1{
 .container{
   margin-top: 50px;
 }
+@media screen and (max-width: 767px) {
+  .container{
+    margin-top: 25px;
+  }
+}
+
+.articles, .single{
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .articles, .single{
+    margin-bottom: 20px;
+  }
+}
+
 .article-item{
   margin-bottom: 40px;
+}
+.article-item:nth-last-child(-n+2){
+  margin-bottom: 0px;
 }
 .article-item h2{
   font-size: 115%;
@@ -72,6 +90,14 @@ h1{
 .article-item time, .article-item .description p{
   font-size: 72%;
   opacity: 0.65;
+}
+
+/* single */
+.single > .single-content{
+  padding: 15px;
+}
+.single > .single-content > .single-time{
+  margin-bottom: 5px;
 }
 
 /* aside */
@@ -95,12 +121,12 @@ h1{
 .date{
   font-size: 82%;
 }
-.sidebar h4, .categories h4, .tags h4{
+.sidebar h4, .categories h4, .tags h4, .relation h4{
   font-size: 1rem;
   padding: 0.65em 0.8em;
   background-color: #d35d5e;
 }
-.sidebar h4 > span, .categories h4 > span, .tags h4 > span{
+.sidebar h4 > span, .categories h4 > span, .tags h4 > span, .relation h4 > span{
   color: #fff;
 }
 .tagcloud{
@@ -165,4 +191,39 @@ h1{
   padding: 60px 0 30px 0;
   text-align: center;
   color: #fff;
+}
+
+/* slick */
+#slider{
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+#slider .slick-list{
+  width: 94%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 990px) {
+  #slider .slick-list{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+#slider img{
+  width: 97%;
+  margin: 0 auto;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+  font-size: 30px;
+}
+.slick-dots li{
+  margin: 0px;
+}
+.slick-prev{
+  left: 0px;
+}
+.slick-next{
+  right: 1%;
 }
