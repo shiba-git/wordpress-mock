@@ -11,6 +11,9 @@ License URI:
 
 body{
   padding-top: 81px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .navbar{
   background-color: #264b67 !important;
@@ -93,10 +96,12 @@ h1{
 }
 
 /* single */
-.single > .single-content{
+.single > .single-content,
+.page > .page-content{
   padding: 15px;
 }
-.single > .single-content > .single-time{
+.single > .single-content > .single-time,
+.page > .page-content > .page-time{
   margin-bottom: 5px;
 }
 
@@ -158,6 +163,9 @@ h1{
   height: 30px;
   top: 4px;
   left: -25px;
+}
+footer{
+  margin-top: auto;
 }
 .footer-inner{
   margin-top: 50px;
@@ -226,4 +234,11 @@ h1{
 }
 .slick-next{
   right: 1%;
+}
+/* Category page */
+.category-page-title,
+.tag-page-title{
+  text-align: center;
+  font-size: 150%;
+  margin-bottom: 20px;
 }
